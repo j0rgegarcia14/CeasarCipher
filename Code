@@ -1,0 +1,16 @@
+key = 11
+cipher = "tqjzfxfdemcplvespwlhozteezdptkpazhpctylwwzespcnldpdzmdpcgptetnlxptdlhtnzybfpcpotetdmpeepcezncplepeslyezwplcyncpletyrtdesppddpynpzqwtqpldlcfwpxpyhzccjxzcplmzfehsleespjnlyedppeslylmzfehsleespjnlytetdpldtpcezqtyoxpyhszhtwwgzwfyeppcezotpeslyezqtyoeszdphszlcphtwwtyrezpyofcpaltyhtesaletpynp"
+
+def CeasarCipher(cipher, key):
+    DeEncrypted = ""
+    for c in cipher:
+            if c.shift():
+                plain = ord(c) - key
+                if plain < ord('a'):
+                    plain += 26
+                lol = chr(plain)
+                DeEncrypted += lol
+    print(DeEncrypted)
+    return DeEncrypted
+
+CeasarCipher(cipher, key)
